@@ -1,87 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Easy Ecom Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            min-height: 100vh;
-            font-size: 22px;
-            color: #333;
-        }
-        #calculator {
-            width: 400px;
-            background-color: #fff;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            outline: none;
-        }
-        button:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-        #result {
-            margin-top: 20px;
-            font-size: 30px;
-        }
-    </style>
-</head>
-<body>
+# Project Title
 
-    <div id="calculator">
-        <input type="number" id="price" placeholder="Enter product price">
-        <input type="number" id="quantity" placeholder="Enter quantity">
-        <button id="calculate" disabled>Calculate</button>
-        <div id="result"></div>
-    </div>
+Brief description of your project.
 
-    <script>
-        var priceInput = document.querySelector("#price");
-        var quantityInput = document.querySelector("#quantity");
-        var calculateBtn = document.querySelector("#calculate");
-        var resultDiv = document.querySelector("#result");
+## Table of Contents
 
-        priceInput.addEventListener("input", validateInputs);
-        quantityInput.addEventListener("input", validateInputs);
-        calculateBtn.addEventListener("click", calculateTotal);
+- [About](#about)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-        function validateInputs() {
-            if (priceInput.value > 0 && quantityInput.value > 0) {
-                calculateBtn.disabled = false;
-            } else {
-                calculateBtn.disabled = true;
-            }
-        }
+## About
 
-        function calculateTotal() {
-            var total = priceInput.value * quantityInput.value;
-            resultDiv.textContent = "Total: $" + total.toFixed(2);
-        }
-    </script>
+A short introduction about your project and its goals. Mention any key features and functionalities.
 
-</body>
-</html>                
+## Getting Started
+
+Instructions on how to clone and set up your project locally. Explain any prerequisites and steps required to get your project up and running.
+
+### Prerequisites
+
+List any software, libraries, or tools that users need to have installed before they can use your project.
+
+### Installation
+
+Provide step-by-step installation instructions. For example:
+
+1. Clone the repository: `git clone https://github.com/yourusername/yourproject.git`
+2. Navigate to the project directory: `cd yourproject`
+3. Install dependencies: `pip install -r requirements.txt`
+
+## Usage
+
+Explain how users can use your project. Provide code examples and demonstrations, if applicable.
+
+```python
+# Example code snippet
+import module1
+result = module1.my_function(1, 2)
+print(result)
